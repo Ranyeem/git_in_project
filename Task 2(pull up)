@@ -1,0 +1,55 @@
+/*
+ * GPIO.c
+ *
+ *  Created on: Jul 8, 2021
+ *      Author: Raneem
+ */
+#include <avr/io.h>
+#include <util/delay.h>
+#define GPIO_PORT
+#define E_NOK
+if (pin>max_pin_number)
+{
+	return E_NOK;
+}
+else {
+	switch (PORT)
+	{
+	case GPIO_PORTA:
+		switch(state)
+		{
+		case GPIO_PULLUP_DISABLE;
+		CLEAR_BIT(PORTA,pin)
+		break;
+		case GPIO_PULLUP_ENABLE;
+		SET_BIT(PORTA,pin)
+		break;
+		}
+		break;
+		case GPIO_PULLUP_DISABLE;
+		CLEAR_BIT(PORTB,pin)
+		break;
+		case GPIO_PULLUP_ENABLE;
+		SET_BIT(PORTB,pin)
+		break;
+	}
+	   break;
+	case GPIO_PULLUP_DISABLE;
+	CLEAR_BIT(PORTC,pin)
+	break;
+	case GPIO_PULLUP_ENABLE;
+	SET_BIT(PORTC,pin)
+	break;
+			}
+    break;
+    case GPIO_PULLUP_DISABLE;
+		CLEAR_BIT(PORTD,pin)
+		break;
+		case GPIO_PULLUP_ENABLE;
+		SET_BIT(PORTD,pin)
+		break;
+		}
+		break;
+		}
+		return E_NOK;
+	}
