@@ -1,0 +1,35 @@
+/*
+ * GPIO.C
+ *
+ *  Created on: Jul 8, 2021
+ *      Author: Raneem
+ */
+#include <avr/io.h>
+#include <util/delay.h>
+#define GPIO_PORT
+#define E_NOK
+void main()
+
+if (pin>max_pin_number)
+{
+	return E_NOK;
+}
+else {
+	switch (PORT)
+	{
+	case GPIO_PORTA:
+		state= READ_BIT(PINA,pin);
+		break;
+	case GPIO_PORTB:
+			state= READ_BIT(PINB,pin);
+			break;
+	case GPIO_PORTC:
+			state= READ_BIT(PINC,pin);
+			break;
+	case GPIO_PORTD:
+			state= READ_BIT(PIND,pin);
+			break;
+	}
+}
+return E_NOK
+}
